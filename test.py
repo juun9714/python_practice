@@ -1,23 +1,19 @@
-#29차시 3. 자료구조 – 셋, 딕셔너리 - 연습문제 4
-# a = {'아메리카노': 1900, '카페모카': 3300, '에스프레소': 1900, '카페라떼': 2500, '카푸치노': 2500, '바닐라라떼': 2900}
-# b = {'헤이즐럿라떼': 2900, '카페모카': 3300, '밀크커피': 3300, '아메리카노': 1900, '샷크린티라떼': 3300}
-# b.update(a)
+# 32차시 3. 자료구조 – 셋, 딕셔너리 - 연습문제 8
+# line=input()
+# lower=0
+# upper=0
+# for k in range(len(line)):
+#     if 97<=ord(line[k])<=122:
+#         lower+=1
+#     elif 65<=ord(line[k])<=90:
+#         upper+=1
 
-# result=set(filter(lambda item:item[1]>=3000, b.items()))
-# print(result)
+# print("UPPER CASE "+str(upper))
+# print("LOWER CASE "+str(lower))
 
+#34차시 3. 자료구조 – 셋, 딕셔너리 - 연습문제 9
 
-#30차시 3. 자료구조 – 셋, 딕셔너리 - 연습문제 5
-# fruit = ['   apple    ','banana','  melon']
-# fruit=[fruit[k].strip() for k in range(len(fruit))]
-
-# dic={fruit[k]:len(fruit[k]) for k in range(len(fruit))}
-# print(dic)
-
-#31차시 3. 자료구조 – 셋, 딕셔너리 - 연습문제 6
-num = int(input())
-dic={}
-for k in range(1,num+1):
-    dic[k]=pow(k,2)
-
-print(dic)
+beer = {'하이트': 2000, '카스': 2100, '칭따오': 2500, '하이네켄': 4000, '버드와이저': 500}
+print(beer)
+beer={k:v*1.05 for k,v in beer.items()}
+print(beer)
