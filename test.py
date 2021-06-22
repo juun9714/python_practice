@@ -1,19 +1,52 @@
-# 32차시 3. 자료구조 – 셋, 딕셔너리 - 연습문제 8
+# 35차시 3. 자료구조 – 셋, 딕셔너리 - 연습문제 10
 # line=input()
-# lower=0
-# upper=0
+# dic={}
 # for k in range(len(line)):
-#     if 97<=ord(line[k])<=122:
-#         lower+=1
-#     elif 65<=ord(line[k])<=90:
-#         upper+=1
+#     if dic.get(line[k])==None:
+#         dic[line[k]]=1
+#     else:
+#         dic[line[k]]+=1
 
-# print("UPPER CASE "+str(upper))
-# print("LOWER CASE "+str(lower))
+# for k,v in dic.items():
+#     print(str(k)+","+str(v))
 
-#34차시 3. 자료구조 – 셋, 딕셔너리 - 연습문제 9
+# 37차시 4. 문자열 - 연습문제 1
+# line=input()
+# rev_line=line[::-1]
+# if line==rev_line:
+#     print(rev_line)
+#     print("입력하신 단어는 회문(Palindrome)입니다.")
 
-beer = {'하이트': 2000, '카스': 2100, '칭따오': 2500, '하이네켄': 4000, '버드와이저': 500}
-print(beer)
-beer={k:v*1.05 for k,v in beer.items()}
-print(beer)
+# 38차시 4. 문자열 - 연습문제 2
+# line=input()
+# li=line.split(' ')
+# for k in range(len(li)):
+#     print(li[2-k],end=" ")
+
+# 39차시 4. 문자열 - 연습문제 3
+# line=input()
+# result={}
+# result["protocol"]=line.split("://")[0]
+# result["host"]=line.split("/")[2]
+# result["others"]=line.split("/")[3]
+# for k,v in result.items():
+#     print(k+": "+str(v))
+
+# 40차시 4. 문자열 - 연습문제 4
+# a=input()
+# b=input()
+# c=input()
+
+# print(">> "+a.upper())
+# print(">> "+b.upper())
+# print(">> "+c.upper())
+
+# 41차시 4. 문자열 - 연습문제 5
+line=input()
+tmp=sorted(list(set(line.split(' '))))
+
+for k in range(len(tmp)):
+    if k==len(tmp)-1:
+        print(tmp[k])
+    else:
+        print(tmp[k],end=",")
