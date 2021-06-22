@@ -1,50 +1,23 @@
-#23차시 2. 자료구조 – 리스트, 튜플 - 연습문제 25
-# line=[12, 24, 35, 70, 88, 120, 155]
-# new=[line[k] for k in range(len(line)) if k!=0 and k!=4 and k!=5]
-# print(new)
+#29차시 3. 자료구조 – 셋, 딕셔너리 - 연습문제 4
+# a = {'아메리카노': 1900, '카페모카': 3300, '에스프레소': 1900, '카페라떼': 2500, '카푸치노': 2500, '바닐라라떼': 2900}
+# b = {'헤이즐럿라떼': 2900, '카페모카': 3300, '밀크커피': 3300, '아메리카노': 1900, '샷크린티라떼': 3300}
+# b.update(a)
 
-
-
-#24차시 2. 자료구조 – 리스트, 튜플 - 연습문제 26
-# one=set([1,3,6,78,35,55])
-# two=set([12,24,35,24,88,120,155])
-# result=list(one&two)
+# result=set(filter(lambda item:item[1]>=3000, b.items()))
 # print(result)
 
 
+#30차시 3. 자료구조 – 셋, 딕셔너리 - 연습문제 5
+# fruit = ['   apple    ','banana','  melon']
+# fruit=[fruit[k].strip() for k in range(len(fruit))]
 
-#25차시 2. 자료구조 – 리스트, 튜플 - 연습문제 27
-# def re(data):
-#     no_re=set(data)
-#     return list(no_re)
+# dic={fruit[k]:len(fruit[k]) for k in range(len(fruit))}
+# print(dic)
 
-# data=[12,24,35,24,88,120,155,88,120,155]
-# new=re(data)
-# print(sorted(new))
+#31차시 3. 자료구조 – 셋, 딕셔너리 - 연습문제 6
+num = int(input())
+dic={}
+for k in range(1,num+1):
+    dic[k]=pow(k,2)
 
-
-
-#27차시 3. 자료구조 – 셋, 딕셔너리 - 연습문제 2
-
-# student={"홍길동": "010-1111-1111","이순신": "010-1111-2222","강감찬": "010-1111-3333"}
-
-# print("아래 학생들의 전화번호를 조회할 수 있습니다.")
-# for k in student.keys():
-#     print(k)
-# print("전화번호를 조회하고자 하는 학생의 이름을 입력하십시오.")
-# name=input()
-
-# for k,v in student.items():
-#     if name==k:
-#         print("{0}의 전화번호는 {1}입니다.".format(name,v))
-
-
-
-# 28차시 3. 자료구조 – 셋, 딕셔너리 - 연습문제 3
-
-product={"TV": 2000000, "냉장고": 1500000, "책상": 350000, "노트북": 1200000, "가스레인지": 200000, "세탁기": 1000000}
-new=sorted(product.items(),key=(lambda x : x[1]), reverse=True)
-for k in range(len(new)):
-    print(new[k][0]+": "+str(new[k][1]))
-
-    
+print(dic)
