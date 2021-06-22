@@ -1,59 +1,58 @@
-# 42차시 4. 문자열 - 연습문제 7
-# line=input()
-# for k in range(len(line)):
-#     if k%2==0:
-#         print(line[k],end="")
-
-# 44차시 5. 객체지향 - 연습문제 1
-# class student:
-#     def __init__(self, Korean, English, Math):
-#         self.Korean=Korean
-#         self.English=English
-#         self.Math=Math
-
-#     def total(self):
-#         print(self.Korean+self.Math+self.English)
-#         return self.Korean+self.Math+self.English
-
-
-# line=input()
-# k=int(line.split(', ')[0])
-# e=int(line.split(', ')[1])
-# m=int(line.split(', ')[2])
-
-# stu=student(k,e,m)
-# print("국어, 영어, 수학의 총점: {0}".format(stu.total()))
-
-#45차시 5. 객체지향 - 연습문제 2
-
-# class Korean:
-#     @staticmethod
-#     def printNationality():
-#         print("대한민국")
-
-# Korean.printNationality()
-# Korean.printNationality()
-
-# 46차시 5. 객체지향 - 연습문제 3
-
-class Student:
-    def __init__(self,name):
-        self.name=name
-
-    def printName(self):
-        print("이름: "+self.name)
-
-class GraduateStduent(Student):
-    def __init__(self,name,major):
-        self.name=name
-        self.major=major
+# 47차시 5. 객체지향 - 연습문제 4
+# class Circle:
+#     PI=3.14
+#     def __init__(self, half):
+#         self.half=half
     
-    def printGS(self):
-        print("이름: {0}, 전공: {1}".format(self.name,self.major))
+#     def space(self):
+#         return pow(self.half,2)*self.PI
 
+# cir=Circle(2)
+# print("원의 면적: %0.2f"%cir.space())
 
-hong=Student("홍길동")
-lee=GraduateStduent("이순신","컴퓨터")
+# 48차시 5. 객체지향 - 연습문제 5
 
-hong.printName()
-lee.printGS()
+# class Rectangle:
+#     def __init__(self, width, height):
+#         self.width=width
+#         self.height=height
+
+#     def square(self):
+#         return self.width*self.height
+
+# r=Rectangle(4, 5)
+# print("사각형의 면적: %d"%r.square())
+
+# 49차시 5. 객체지향 - 연습문제 6
+
+# class Shape:
+#     def area():
+#         return 0
+
+# class Square(Shape):
+#     def __init__(self, length):
+#         self.length=length
+#     def area(self):
+#         return pow(self.length,2)
+
+# s=Square(3)
+# print("정사각형의 면적: {0}".format(s.area()))
+
+# 50차시 5. 객체지향 - 연습문제 7
+
+class Person:
+    def getGender():
+        return "Unknown"
+
+class Male(Person):
+    def getGender(self):
+        return "Male"
+
+class Female(Person):
+    def getGender(self):
+        return "Female"
+
+m=Male()
+f=Female()
+print(m.getGender())
+print(f.getGender())
