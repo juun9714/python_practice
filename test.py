@@ -1,52 +1,59 @@
-# 35차시 3. 자료구조 – 셋, 딕셔너리 - 연습문제 10
+# 42차시 4. 문자열 - 연습문제 7
 # line=input()
-# dic={}
 # for k in range(len(line)):
-#     if dic.get(line[k])==None:
-#         dic[line[k]]=1
-#     else:
-#         dic[line[k]]+=1
+#     if k%2==0:
+#         print(line[k],end="")
 
-# for k,v in dic.items():
-#     print(str(k)+","+str(v))
+# 44차시 5. 객체지향 - 연습문제 1
+# class student:
+#     def __init__(self, Korean, English, Math):
+#         self.Korean=Korean
+#         self.English=English
+#         self.Math=Math
 
-# 37차시 4. 문자열 - 연습문제 1
+#     def total(self):
+#         print(self.Korean+self.Math+self.English)
+#         return self.Korean+self.Math+self.English
+
+
 # line=input()
-# rev_line=line[::-1]
-# if line==rev_line:
-#     print(rev_line)
-#     print("입력하신 단어는 회문(Palindrome)입니다.")
+# k=int(line.split(', ')[0])
+# e=int(line.split(', ')[1])
+# m=int(line.split(', ')[2])
 
-# 38차시 4. 문자열 - 연습문제 2
-# line=input()
-# li=line.split(' ')
-# for k in range(len(li)):
-#     print(li[2-k],end=" ")
+# stu=student(k,e,m)
+# print("국어, 영어, 수학의 총점: {0}".format(stu.total()))
 
-# 39차시 4. 문자열 - 연습문제 3
-# line=input()
-# result={}
-# result["protocol"]=line.split("://")[0]
-# result["host"]=line.split("/")[2]
-# result["others"]=line.split("/")[3]
-# for k,v in result.items():
-#     print(k+": "+str(v))
+#45차시 5. 객체지향 - 연습문제 2
 
-# 40차시 4. 문자열 - 연습문제 4
-# a=input()
-# b=input()
-# c=input()
+# class Korean:
+#     @staticmethod
+#     def printNationality():
+#         print("대한민국")
 
-# print(">> "+a.upper())
-# print(">> "+b.upper())
-# print(">> "+c.upper())
+# Korean.printNationality()
+# Korean.printNationality()
 
-# 41차시 4. 문자열 - 연습문제 5
-line=input()
-tmp=sorted(list(set(line.split(' '))))
+# 46차시 5. 객체지향 - 연습문제 3
 
-for k in range(len(tmp)):
-    if k==len(tmp)-1:
-        print(tmp[k])
-    else:
-        print(tmp[k],end=",")
+class Student:
+    def __init__(self,name):
+        self.name=name
+
+    def printName(self):
+        print("이름: "+self.name)
+
+class GraduateStduent(Student):
+    def __init__(self,name,major):
+        self.name=name
+        self.major=major
+    
+    def printGS(self):
+        print("이름: {0}, 전공: {1}".format(self.name,self.major))
+
+
+hong=Student("홍길동")
+lee=GraduateStduent("이순신","컴퓨터")
+
+hong.printName()
+lee.printGS()
